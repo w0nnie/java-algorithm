@@ -1,65 +1,50 @@
 import java.util.*;
 
-class FiedlData{
-    private int numLength;
-    private int ans;
-    private String userInput;
-
-
-    public int getNumLength() {
-        return numLength;
-    }
-
-    public void setNumLength(int numLength) {
-        if(numLength > 100) return;
-        this.numLength = numLength;
-    }
-
-    public int getAns() {
-        return ans;
-    }
-
-    public void setAns(int ans) {
-        this.ans = ans;
-    }
-
-    public String getUserInput() {
-        return userInput;
-    }
-
-    public void setUserInput(String userInput) {
-        this.userInput = userInput;
-    }
-}
 public class Main {
     private static Scanner sc = new Scanner(System.in);
     private static int numLength;
     private static int ans;
     private static String userInput;
     public static void main(String[] args) {
-        FiedlData fd = new FiedlData();
-        inputNumLength(fd);
+        
+        //N의 범위 밖의 값이 입력되면 재입력
+        numLength = sc.nextInt();
+        while(!rangeN(numLength)){
+            numLength = sc.nextInt();
+        }
+        //numLength와 userInput의 length가 상이하거나 userInput에 공백 포함이면 재입력
         userInput = sc.next();
-        System.out.println(parseAndSum(fd));
+        while(!(numCount(userInput) == numLength) && blankCheck(userInput)){
+            userInput = sc.next();
+        }
+        //핵심로직 print
+        System.out.println(totalSum(userInput));
     }
 
-    private static void inputNumLength(FiedlData fd) {
-        fd.setNumLength(Integer.parseInt(sc.next()));
-        while(fd.getNumLength() == 0){
-            inputNumLength(fd);
-        }
+    private static boolean rangeN(int num){
+        if(num >= 1 && num <= 100) return true;
+        return false;
     }
 
-    /**
-     * String으로 입력받은 userInput 변수를
-     * char -> String -> Int
-     * ans 변수에 누적
-     * @return
-     */
-    private static int parseAndSum(FiedlData fd) {
-        for (int i = 0; i < fd.getNumLength() ; i++) {
-            ans += Integer.parseInt(String.valueOf(userInput.charAt(i)));
+    private static int numCount(String num){
+        List<Integer> list = new ArrayList<>();
+        for (int i = 0; i < num.length() ; i++) {
+            list.add(Integer.parseInt(String.valueOf(num.charAt(i))));
         }
-        return ans;
+        return list.size();
+    }
+
+    private static boolean blankCheck(String num){
+        if(num.contains(" ")) return false;
+        return true;
+    }
+
+    private static int totalSum(String num){
+        List<Integer> list = new ArrayList<>();
+        for (int i = 0; i < num.length() ; i++) {
+            list.add(Integer.parseInt(String.valueOf(num.charAt(i))));
+        }
+
+        return list.stream().reduce(0, Integer::sum);
     }
 }
