@@ -1,43 +1,57 @@
 import java.io.*;
-import java.util.HashMap;
-import java.util.StringTokenizer;
+import java.util.*;
 
-public class Main {
-    static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-    static StringTokenizer tokens;
+public class Main{
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[]args) throws IOException{
 
-        int N = Integer.parseInt(br.readLine());
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringTokenizer stringTokenizer = new StringTokenizer(bufferedReader.readLine());
 
-        HashMap<Integer,Integer> map = new HashMap<>();
+        //상근이 보유중인 카드 개수
+        int hasCardNum = Integer.parseInt(stringTokenizer.nextToken());
+        //상근이 보유중인 숫자카드
+        int hasCards[] = new int[hasCardNum];
 
-        tokens = new StringTokenizer(br.readLine());
-        for(int i = 0; i<N; i++) {
-            int num = Integer.parseInt(tokens.nextToken());
-            if(!map.containsKey(num)) {
-                map.put(num, 1);
-            }
-            else {
-                int newValue = map.get(num) + 1;
-                map.put(num, newValue);
-            }
+        stringTokenizer = new StringTokenizer(bufferedReader.readLine());
+
+        //상근이 보유중인 숫자카드 입력
+        for (int i = 0; i < hasCardNum; i++) {
+            hasCards[i] = Integer.parseInt(stringTokenizer.nextToken());
+        }
+        //질의 수
+        stringTokenizer = new StringTokenizer(bufferedReader.readLine());
+        int question = Integer.parseInt(stringTokenizer.nextToken());
+        //key값에 적힌 숫자가 상근이 몇개가지고있는지 value에 들어간다.
+        Map<Integer, Integer> questionCards = new HashMap<>();
+        stringTokenizer = new StringTokenizer(bufferedReader.readLine());
+        List<Integer> cardArr = new ArrayList<>();
+        for (int i = 0; i < question; i++) {
+            int nextCardNum = Integer.parseInt(stringTokenizer.nextToken());
+            questionCards.put(nextCardNum, 0);
+            cardArr.add(nextCardNum);
         }
 
-        int M = Integer.parseInt(br.readLine());
-        tokens = new StringTokenizer(br.readLine());
-        for(int i = 0; i<M; i++) {
-            int num = Integer.parseInt(tokens.nextToken());
-            if(map.containsKey(num)) {
-                bw.write(map.get(num) + " ");
-            }
-            else {
-                bw.write("0 ");
+        for (int i = 0; i < hasCards.length; i++) {
+            if(questionCards.containsKey(hasCards[i])){
+                int count = questionCards.get(hasCards[i]) + 1;
+                questionCards.put(hasCards[i], count);
             }
         }
-        bw.flush();
-        bw.close();
-        br.close();
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = 0; i < cardArr.size(); i++) {
+            int card = questionCards.get(cardArr.get(i));
+            if (i == cardArr.size()-1) {
+                stringBuilder.append(card);
+            }else{
+                stringBuilder.append(card + " ");
+            }
+        }
+        bufferedWriter.write(String.valueOf(stringBuilder));
+        bufferedWriter.flush();
+        bufferedWriter.close();
+        bufferedReader.close();
     }
+
 }
