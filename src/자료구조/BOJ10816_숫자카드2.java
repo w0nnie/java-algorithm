@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.*;
 
 public class BOJ10816_숫자카드2{
-
+    //test
     public static void main(String[]args) throws IOException{
 
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
