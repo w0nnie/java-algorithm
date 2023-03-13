@@ -1,7 +1,6 @@
 package 프로그래머스.level0.P120804;
 
 public class Main {
-
     public static void main(String[] args) {
 
         System.out.println(new Solution().solution(1, 2));
