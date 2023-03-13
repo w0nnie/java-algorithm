@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5897376-f3a3-4b5a-afac-be6daf5ebe47" name="Changes" comment="Tdd test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/프로그래머스/level0/P120806/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/프로그래머스/level0/P120806/SolutionTest.java" afterDir="false" />
+    <list default="true" id="c5897376-f3a3-4b5a-afac-be6daf5ebe47" name="Changes" comment="commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/프로그래머스/level0/P120814/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/프로그래머스/level0/P120831/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/프로그래머스/level0/P120814/SolutionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/프로그래머스/level0/P120804/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/프로그래머스/level0/P120804/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +92,7 @@
     "create.test.in.the.same.root": "true",
     "jdk.selected.JAVA_MODULE": "11",
     "last_directory_selection": "C:/Users/KwonJinwon/study/java-algorithm/src/test/java/프로그래머스/level0",
-    "last_opened_file_path": "C:/Users/KwonJinwon/study/java-algorithm/src/main/java/프로그래머스/level0/P120804",
+    "last_opened_file_path": "C:/Users/KwonJinwon/study/java-algorithm/src/main/java/프로그래머스/level0/P120814",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -107,6 +107,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\KwonJinwon\study\java-algorithm\src\main\java\프로그래머스\level0\P120814" />
+      <recent name="C:\Users\KwonJinwon\study\java-algorithm\src\main\java\프로그래머스\level0\P120829" />
       <recent name="C:\Users\KwonJinwon\study\java-algorithm\src\main\java\프로그래머스\level0\P120804" />
       <recent name="C:\Users\KwonJinwon\study\java-algorithm\src\main\java\프로그래머스\level0" />
     </key>
@@ -117,11 +119,13 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="프로그래머스.level0.P120814" />
       <recent name="프로그래머스.level0.P120806" />
       <recent name="프로그래머스.level0.P120804" />
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="프로그래머스.level0.P120814" />
       <recent name="프로그래머스.level0.P120806" />
       <recent name="study" />
       <recent name="자료구조" />
@@ -129,51 +133,38 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.SolutionTest">
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="프로그래머스.level0.P120806.Main" />
-      <module name="java-algorithm.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="프로그래머스.level0.P120806.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="프로그래머스.level0.P120806.Main" />
-      <module name="java-algorithm.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="프로그래머스.level0.P120806.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="프로그래머스.level0.P120806.Main" />
-      <module name="java-algorithm.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="프로그래머스.level0.P120806.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="프로그래머스.level0.P120806.Main" />
+      <option name="MAIN_CLASS_NAME" value="프로그래머스.level0.P120831.Main" />
       <module name="java-algorithm.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="프로그래머스.level0.P120806.*" />
+          <option name="PATTERN" value="프로그래머스.level0.P120831.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="프로그래머스.level0.P120814.Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="프로그래머스.level0.P120814.Main" />
+      <module name="java-algorithm.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="프로그래머스.level0.P120814.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="프로그래머스.level0.P120814.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="프로그래머스.level0.P120814.Main" />
+      <module name="java-algorithm.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="프로그래머스.level0.P120814.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -185,13 +176,29 @@
       <module name="java-algorithm.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="프로그래머스.level0.P120806.*" />
+          <option name="PATTERN" value="프로그래머스.level0.P120814.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="프로그래머스.level0.P120806" />
-      <option name="MAIN_CLASS_NAME" value="프로그래머스.level0.P120806.SolutionTest" />
+      <option name="PACKAGE_NAME" value="프로그래머스.level0.P120814" />
+      <option name="MAIN_CLASS_NAME" value="프로그래머스.level0.P120814.SolutionTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SolutionTest.solution3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-algorithm.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="프로그래머스.level0.P120814.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="프로그래머스.level0.P120814" />
+      <option name="MAIN_CLASS_NAME" value="프로그래머스.level0.P120814.SolutionTest" />
+      <option name="METHOD_NAME" value="solution3" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -212,9 +219,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.SolutionTest" />
-        <item itemvalue="Application.Main (3)" />
-        <item itemvalue="Application.Main (2)" />
-        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="JUnit.SolutionTest.solution3" />
+        <item itemvalue="Application.프로그래머스.level0.P120814.Main (1)" />
+        <item itemvalue="Application.프로그래머스.level0.P120814.Main" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -248,7 +255,7 @@
       <workItem from="1678674151329" duration="1259000" />
       <workItem from="1678675630407" duration="74000" />
       <workItem from="1678676201192" duration="278000" />
-      <workItem from="1678677549598" duration="2896000" />
+      <workItem from="1678677549598" duration="5570000" />
     </task>
     <task id="LOCAL-00001" summary="12/19">
       <created>1671452115392</created>
@@ -299,7 +306,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678678187810</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="commit">
+      <created>1678683849743</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1678683849743</updated>
+    </task>
+    <task id="LOCAL-00009" summary="commit">
+      <created>1678683894643</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1678683894643</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,6 +355,7 @@
     <MESSAGE value="BOJ1874_스택수열" />
     <MESSAGE value="init" />
     <MESSAGE value="Tdd test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tdd test" />
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
 </project>
