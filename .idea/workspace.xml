@@ -4,24 +4,127 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5897376-f3a3-4b5a-afac-be6daf5ebe47" name="Changes" comment="BOJ1874_스택수열">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/프로그래머스/두_수의_합.java" afterDir="false" />
+    <list default="true" id="c5897376-f3a3-4b5a-afac-be6daf5ebe47" name="Changes" comment="init">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/java-algorithm.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/java-algorithm.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/MainTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaAlgorithm/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaAlgorithm/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaAlgorithm/자료구조/BOJ9012_괄호.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaAlgorithm/자료구조/BOJ9012_괄호.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javaAlgorithm.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/abstraction01/Mouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/abstraction01/Mouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/abstraction01/MouseDrvier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/abstraction01/MouseDrvier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/abstraction02/Mouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/abstraction02/Mouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/abstraction02/MouseDrvier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/abstraction02/MouseDrvier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/encapsulation01/packageOne/ClassA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/encapsulation01/packageOne/ClassA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/encapsulation01/packageOne/ClassB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/encapsulation01/packageOne/ClassB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/inheritance01/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/inheritance01/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/inheritance01/Birds.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/inheritance01/Birds.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/inheritance01/Driver01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/inheritance01/Driver01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/inheritance01/Driver02.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/inheritance01/Driver02.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/inheritance01/Driver03.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/inheritance01/Driver03.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/inheritance01/Mammalia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/inheritance01/Mammalia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/inheritance01/Penguin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/inheritance01/Penguin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/inheritance01/Whale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/inheritance01/Whale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/inheritance02/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/inheritance02/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/inheritance02/Birds.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/inheritance02/Birds.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/inheritance02/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/inheritance02/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/inheritance02/Penguin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/inheritance02/Penguin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/inheritance02/Swim.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/스프링_입문을_위한_자바멀티_프로세스객체_지향의_원리와_이해/inheritance02/Swim.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/자료구조/BOJ10816_숫자카드2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/자료구조/BOJ10816_숫자카드2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/자료구조/BOJ10986_나머지합구하기.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/자료구조/BOJ10986_나머지합구하기.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/자료구조/BOJ11659_구간합구하기.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/자료구조/BOJ11659_구간합구하기.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/자료구조/BOJ11660_구간합구하기2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/자료구조/BOJ11660_구간합구하기2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/자료구조/BOJ11720_숫자의합구하기.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/자료구조/BOJ11720_숫자의합구하기.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/자료구조/BOJ1546_평균구하기.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/자료구조/BOJ1546_평균구하기.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/자료구조/BOJ1874_스택수열.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/자료구조/BOJ1874_스택수열.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/자료구조/BOJ1894_오름차순수열.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/자료구조/BOJ1894_오름차순수열.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/자료구조/BOJ2018_수들의합.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/자료구조/BOJ2018_수들의합.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/자료구조/BOJ9012_괄호.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/자료구조/BOJ9012_괄호.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/자료구조/BOJ9093_단어뒤집기.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/자료구조/BOJ9093_단어뒤집기.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/프로그래머스/두_수의_합.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/프로그래머스/두_수의_합.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/Bronze/10926. ？？！/？？！.java" beforeDir="false" afterPath="$PROJECT_DIR$/백준/Bronze/10926. ？？！/？？！.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/Bronze/10984. 내 학점을 구해줘/내 학점을 구해줘.java" beforeDir="false" afterPath="$PROJECT_DIR$/백준/Bronze/10984. 내 학점을 구해줘/내 학점을 구해줘.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/Bronze/1152. 단어의 개수/단어의 개수.java" beforeDir="false" afterPath="$PROJECT_DIR$/백준/Bronze/1152. 단어의 개수/단어의 개수.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/Bronze/1157. 단어 공부/단어 공부.java" beforeDir="false" afterPath="$PROJECT_DIR$/백준/Bronze/1157. 단어 공부/단어 공부.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/Bronze/11720. 숫자의 합/숫자의 합.java" beforeDir="false" afterPath="$PROJECT_DIR$/백준/Bronze/11720. 숫자의 합/숫자의 합.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/Bronze/1546. 평균/평균.java" beforeDir="false" afterPath="$PROJECT_DIR$/백준/Bronze/1546. 평균/평균.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/Bronze/2490. 윷놀이/윷놀이.java" beforeDir="false" afterPath="$PROJECT_DIR$/백준/Bronze/2490. 윷놀이/윷놀이.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/Bronze/2525. 오븐 시계/오븐 시계.py" beforeDir="false" afterPath="$PROJECT_DIR$/백준/Bronze/2525. 오븐 시계/오븐 시계.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/Bronze/2557. Hello World/Hello World.java" beforeDir="false" afterPath="$PROJECT_DIR$/백준/Bronze/2557. Hello World/Hello World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/Bronze/2587. 대표값2/대표값2.java" beforeDir="false" afterPath="$PROJECT_DIR$/백준/Bronze/2587. 대표값2/대표값2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/Bronze/2609. 최대공약수와 최소공배수/최대공약수와 최소공배수.java" beforeDir="false" afterPath="$PROJECT_DIR$/백준/Bronze/2609. 최대공약수와 최소공배수/최대공약수와 최소공배수.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/Bronze/2675. 문자열 반복/문자열 반복.java" beforeDir="false" afterPath="$PROJECT_DIR$/백준/Bronze/2675. 문자열 반복/문자열 반복.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/Bronze/2775. 부녀회장이 될테야/부녀회장이 될테야.java" beforeDir="false" afterPath="$PROJECT_DIR$/백준/Bronze/2775. 부녀회장이 될테야/부녀회장이 될테야.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/Bronze/9093. 단어 뒤집기/단어 뒤집기.java" beforeDir="false" afterPath="$PROJECT_DIR$/백준/Bronze/9093. 단어 뒤집기/단어 뒤집기.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/Silver/10814. 나이순 정렬/나이순 정렬.java" beforeDir="false" afterPath="$PROJECT_DIR$/백준/Silver/10814. 나이순 정렬/나이순 정렬.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/Silver/10815. 숫자 카드/숫자 카드.java" beforeDir="false" afterPath="$PROJECT_DIR$/백준/Silver/10815. 숫자 카드/숫자 카드.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/Silver/10816. 숫자 카드 2/숫자 카드 2.java" beforeDir="false" afterPath="$PROJECT_DIR$/백준/Silver/10816. 숫자 카드 2/숫자 카드 2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/Silver/10828. 스택/스택.java" beforeDir="false" afterPath="$PROJECT_DIR$/백준/Silver/10828. 스택/스택.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/Silver/11659. 구간 합 구하기 4/구간 합 구하기 4.java" beforeDir="false" afterPath="$PROJECT_DIR$/백준/Silver/11659. 구간 합 구하기 4/구간 합 구하기 4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/Silver/11660. 구간 합 구하기 5/구간 합 구하기 5.java" beforeDir="false" afterPath="$PROJECT_DIR$/백준/Silver/11660. 구간 합 구하기 5/구간 합 구하기 5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/Silver/11728. 배열 합치기/배열 합치기.java" beforeDir="false" afterPath="$PROJECT_DIR$/백준/Silver/11728. 배열 합치기/배열 합치기.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/Silver/1874. 스택 수열/스택 수열.java" beforeDir="false" afterPath="$PROJECT_DIR$/백준/Silver/1874. 스택 수열/스택 수열.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/Silver/1978. 소수 찾기/소수 찾기.java" beforeDir="false" afterPath="$PROJECT_DIR$/백준/Silver/1978. 소수 찾기/소수 찾기.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/Silver/2003. 수들의 합 2/수들의 합 2.java" beforeDir="false" afterPath="$PROJECT_DIR$/백준/Silver/2003. 수들의 합 2/수들의 합 2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/Silver/2018. 수들의 합 5/수들의 합 5.java" beforeDir="false" afterPath="$PROJECT_DIR$/백준/Silver/2018. 수들의 합 5/수들의 합 5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/Silver/2960. 에라토스테네스의 체/에라토스테네스의 체.java" beforeDir="false" afterPath="$PROJECT_DIR$/백준/Silver/2960. 에라토스테네스의 체/에라토스테네스의 체.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/Silver/9012. 괄호/괄호.java" beforeDir="false" afterPath="$PROJECT_DIR$/백준/Silver/9012. 괄호/괄호.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="java-algorithm" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="java-algorithm" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="java-algorithm" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -39,103 +142,127 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2IIimoMkOoKqguhh6Vbx7HJ4aZ4" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/w0nnie/Documents/study/javaAlgorithm&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
+    "jdk.selected.JAVA_MODULE": "11",
+    "last_directory_selection": "C:/Users/KwonJinwon/study/java-algorithm/src/test/java",
+    "last_opened_file_path": "/Users/w0nnie/Documents/study/javaAlgorithm",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\KwonJinwon\study\java-algorithm\src\main\java" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="study" />
       <recent name="자료구조" />
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.두_수의_합">
-    <configuration name="KKR" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="study.KKR" />
-      <module name="javaAlgorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="study.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="KKR2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="study.KKR2" />
-      <module name="javaAlgorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="study.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+  <component name="RunManager" selected="JUnit.MainTest.test">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="java-algorithm.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="java-algorithm" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="java-algorithm [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="MainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-algorithm.test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MainTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-algorithm.test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MainTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
       <module name="javaAlgorithm" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="두_수의_합" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="프로그래머스.두_수의_합" />
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <module name="javaAlgorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="프로그래머스.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="problem1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="자료구조.problem1" />
-      <module name="javaAlgorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="자료구조.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.두_수의_합" />
-        <item itemvalue="Application.KKR2" />
-        <item itemvalue="Application.KKR" />
+        <item itemvalue="JUnit.MainTest.test" />
+        <item itemvalue="JUnit.MainTest" />
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.problem1" />
+        <item itemvalue="Gradle.java-algorithm [build]" />
       </list>
     </recent_temporary>
   </component>
@@ -162,7 +289,10 @@
       <workItem from="1678265467345" duration="4000" />
       <workItem from="1678421815422" duration="2902000" />
       <workItem from="1678434333412" duration="3903000" />
-      <workItem from="1678672734973" duration="711000" />
+      <workItem from="1678672734973" duration="1012000" />
+      <workItem from="1678673757427" duration="18000" />
+      <workItem from="1678673780432" duration="365000" />
+      <workItem from="1678674151329" duration="1259000" />
     </task>
     <task id="LOCAL-00001" summary="12/19">
       <created>1671452115392</created>
@@ -199,7 +329,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678251152793</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="init">
+      <created>1678673536770</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1678673536770</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,8 +366,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="12/19" />
     <MESSAGE value="BOJ1874_스택수열" />
-    <option name="LAST_COMMIT_MESSAGE" value="BOJ1874_스택수열" />
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
 </project>
