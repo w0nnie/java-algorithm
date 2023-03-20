@@ -10,6 +10,11 @@ public class Main {
 }
 
 /**
+ * hashmap을 이용하였다
+ * 0~9 까지 map에 위치값에 해당하는 알파벳들을 벨류값으로 넣고
+ * 매겨변수로 들어온 age를 string -> char 로 캐스팅 하여
+ * map.get(key) 값으로 접근하여 원하는 value값을 찾고
+ * return 타입인 answer에 붙여 return 하였다.
  */
 class Solution {
     public String solution(int age) {
