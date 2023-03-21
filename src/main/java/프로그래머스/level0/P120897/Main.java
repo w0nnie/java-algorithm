@@ -1,5 +1,6 @@
 package 프로그래머스.level0.P120897;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -7,7 +8,8 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(new Solution().solution(24));
+//        System.out.println(new Solution().solution(25));
+        System.out.println(Arrays.toString(new Solution().solution(1)));
     }
 }
 
@@ -26,7 +28,9 @@ class Solution {
         int sqrt = (int) Math.sqrt((double) n);
         List<Integer> list = new ArrayList<>();
         list.add(1);
-        list.add(n);
+        if (1 != n) {
+            list.add(n);
+        }
         int i = 2;
         while (i <= sqrt) {
             if (n % i == 0) {
