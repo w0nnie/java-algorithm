@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(new Solution().solution(123456,7));
+        System.out.println(new Solution2().solution(123456,6));
     }
 }
 /**
@@ -26,5 +26,26 @@ class Solution {
         }
         int answer = list.indexOf(k) != - 1 ?  list.indexOf(k) + 1 : list.indexOf(k);
         return answer;
+    }
+}
+
+/**
+ * 리팩토링
+ * String에서도 valueOf 메서드를 사용가능했다
+ * 굳이 List까지 만들어서 메모리에 할당하고 for문을 돌려 스택메모리까지 사용할필요도 없었다
+ */
+class Solution2 {
+    public int solution(int num, int k) {
+        return String.valueOf(num).indexOf(String.valueOf(k)) != -1 ? String.valueOf(num).indexOf(String.valueOf(k))  + 1: String.valueOf(num).indexOf(String.valueOf(k)) ;
+    }
+}
+
+/**
+ * 다른사람풀이 그저 감탄했다
+ * 1부터 카운트 해주기위해 아무관련없이 한글자인 string붙여서 indexOf를 바로 먹였다..
+ */
+class Solution3 {
+    public int solution(int num, int k) {
+        return ("-" + num).indexOf(String.valueOf(k));
     }
 }
