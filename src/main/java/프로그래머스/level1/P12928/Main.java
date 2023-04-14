@@ -1,9 +1,15 @@
 package 프로그래머스.level1.P12928;
 
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.IntStream;
 
 public class Main {
     public static void main(String[] args) {
+        List<Integer> list = new ArrayList<>();
+        System.out.println();
+
         System.out.println(new Solution().solution(12));
     }
 }
