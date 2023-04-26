@@ -1,27 +1,27 @@
 import java.io.*;
-import java.util.Arrays;
-import java.util.Comparator;
 
 public class Main {
-    private static final BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    private static final BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-    private static int[] arr;
-    private static int[] tmp;
 
+    static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+    static int[] arr;
+    static int[] sorted;
     public static void main(String[] args) throws IOException {
-        int size = Integer.parseInt(br.readLine());
 
-        arr = new int[size];
-        tmp = new int[size];
-
-        for (int i = 0; i < size; i++) {
+        int n = Integer.parseInt(br.readLine());
+        arr = new int[n];
+        sorted = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
             arr[i] = Integer.parseInt(br.readLine());
         }
 
-        mergeSort(0, size - 1);
+        divide(0, arr.length - 1);
+        print();
+    }
 
+    private static void print() throws IOException {
         for (int i = 0; i < arr.length; i++) {
-            bw.write(Integer.toString(arr[i]) + "\n");
+            bw.write(arr[i] + "\n");
         }
 
         bw.flush();
@@ -29,42 +29,48 @@ public class Main {
         br.close();
     }
 
-    private static void mergeSort(int startIndex, int endIndex) {
-        if (startIndex < endIndex) {
-            int midIndex = (startIndex + endIndex) / 2;
+    public static void divide(int left, int right) {
+        if (left < right) {
 
-            mergeSort(startIndex, midIndex);
-            mergeSort(midIndex + 1, endIndex);
+            int middle = (left + right) / 2;
 
-            merge(startIndex, midIndex, endIndex);
+            divide(left, middle); //왼쪽분할
+            divide(middle + 1, right); //오른쪽분할
+            reverseConquer(left, middle, right); //정복
         }
     }
 
-    private static void merge(int startIndex, int midIndex, int endIndex) {
-        int left = startIndex;
-        int right = midIndex + 1;
-        int index = startIndex;
+    private static void reverseConquer(int left, int middle, int right) { // 내림차순
+        int i = left;
+        int j = middle + 1;
+        int k = left;
 
-        while (left <= midIndex && right <= endIndex) {
-            if (arr[left] >= arr[right]) {
-                tmp[index++] = arr[left++];
-            } else {
-                tmp[index++] = arr[right++];
+        while (i <= middle && j <= right) {
+            if (arr[i] > arr[j]) {
+                sorted[k] = arr[i];
+                k++;
+                i++;
+            }else{
+                sorted[k] = arr[j];
+                k++;
+                j++;
             }
         }
 
-        while (left <= midIndex) {
-            tmp[index++] = arr[left++];
+        while (i <= middle) {
+            sorted[k] = arr[i];
+            k++;
+            i++;
         }
 
-        while (right <= endIndex) {
-            tmp[index++] = arr[right++];
+        while (j <= right) {
+            sorted[k] = arr[j];
+            k++;
+            j++;
         }
 
-        for (int i = startIndex; i <= endIndex; i++) {
-            arr[i] = tmp[i];
+        for (int l = left; l <= right; l++) {
+            arr[l] = sorted[l];
         }
-
     }
-
 }
