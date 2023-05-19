@@ -14,7 +14,7 @@ class Solution {
                 stack.push(c);
             } else{
                 if(stack.isEmpty()) return false;
-                if (stack.peek().equals('(')) {
+                if (stack.peek() == "(") {
                     stack.pop();
                 }
             }
