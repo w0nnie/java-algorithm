@@ -6,7 +6,7 @@ import java.security.NoSuchAlgorithmException;
 public class Process {
 
     public static void main(String[] args) throws NoSuchAlgorithmException {
-        User user = new User(1L, "wlsdnjs!12");
+        User user = new User(1L, "bbaaccdd");
         System.out.println(getEncSHA256(user.getPassword()));
     }
 
