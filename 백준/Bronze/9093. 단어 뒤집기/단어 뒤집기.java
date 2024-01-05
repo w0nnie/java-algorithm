@@ -3,32 +3,31 @@ import java.util.Stack;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        int n = Integer.parseInt(br.readLine());
-
-
-        for (int i = 0; i < n; i++) {
+        int howManyTime = Integer.parseInt(br.readLine());
+        for (int i = 0; i < howManyTime; i++) {
             Stack stack = new Stack();
-            String s = br.readLine();
-            for (int j = 0; j < s.length(); j++) {
-                if (s.charAt(j) == ' ') {
-                    while(!stack.isEmpty()){
+            String input = br.readLine();
+            for (int j = 0; j < input.length(); j++) {
+                char word = input.charAt(j);
+
+                if (word == ' ') {
+                    while (!stack.isEmpty()) {
                         bw.write(String.valueOf(stack.pop()));
+
                     }
                     bw.write(" ");
                 }else{
-                    stack.add(s.charAt(j));
+                    stack.add(word);
                 }
             }
-            while(!stack.isEmpty()){
+            while (!stack.isEmpty()) {
                 bw.write(String.valueOf(stack.pop()));
             }
-            bw.write("\n");
+            bw.newLine();
         }
         bw.flush();
-        bw.close();
+        br.close();
     }
 }
-
