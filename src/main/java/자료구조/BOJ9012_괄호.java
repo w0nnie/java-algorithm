@@ -7,36 +7,35 @@ import java.util.Stack;
 
 public class BOJ9012_괄호 {
 
-    static BufferedReader br;
     public static void main(String[] args) throws IOException {
-        br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int rowCount = Integer.parseInt(br.readLine());
+        int howManyTime = Integer.parseInt(br.readLine());
 
-        for (int i = 0; i < rowCount; i++) {
-            Stack<Character> stack = new Stack<>();
-            String vps = br.readLine();
-            solve(stack, vps);
-        }
-    }
+        for (int i = 0; i < howManyTime; i++) {
+            Stack stack = new Stack();
+            String line = br.readLine();
 
-    private static void solve(Stack<Character> stack, String vps) {
-        for (int j = 0; j < vps.length(); j++) {
-            if (vps.charAt(j) == '(') {
-                stack.push(vps.charAt(j));
-            } else if (vps.charAt(j) == ')') {
-                if (stack.isEmpty()) {
-                    stack.push(vps.charAt(j));
-                    break;
-                } else {
-                    stack.pop();
+            for (int j = 0; j < line.length(); j++) {
+                char brackets = line.charAt(j);
+
+                if (brackets == '(') {
+                    stack.push(brackets);
+                } else if (brackets == ')') {
+                    if (stack.isEmpty()) {
+                        stack.push(brackets);
+                        break;
+                    } else {
+                        stack.pop();
+                    }
                 }
             }
-        }
-        if (stack.isEmpty()) {
-            System.out.println("YES");
-        }else{
-            System.out.println("NO");
+
+            if (stack.isEmpty()) {
+                System.out.println("YES");
+            }else{
+                System.out.println("NO");
+            }
         }
     }
 }
