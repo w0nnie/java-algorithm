@@ -1,39 +1,29 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 
 public class Main {
-    /**
-     * 슈도코드
-     * N, 시작인덱스, 종료인덱스  ans = 1(N이 15일떄 숫자 15만 뽑는경우를 미리 넣고 초기화)
-     * sum = 시작인덱스 ~  종료인덱스 까지의 합
-     * sum > N : sum - 시작인덱스, 시작인덱스 ++
-     * sum < N : 종료인덱스 ++ sum + 종료인데스
-     * sum == N : count ++ 종료인덱스 ++ sum + 종료인데스
-     *
-     */
-
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
-        int start,end,sum,ans;
-        start = 1;
-        end = 1;
-        sum = 1;
-        ans = 1;
-        while (end != N) {
+        int[] arr = new int[N + 1];
+        for (int i = 1; i <= N; i++) {
+            arr[i] += arr[i - 1] + i;
+        }
+        int start = 1;
+        int end = 1;
+        int sum;
+        int count = 0;
+        while (start <= N) {
+            sum = arr[end] - arr[start - 1];
             if (sum == N) {
-                ans++;
+                count++;
+                start++;
+            } else if (sum < N) {
                 end++;
-                sum += end;
             } else if (sum > N) {
-                sum -= start;
-                start ++;
-            } else {
-                end++;
-                sum += end;
+                start++;
             }
         }
-        System.out.println(ans);
+
+        System.out.println(count);
     }
 }
