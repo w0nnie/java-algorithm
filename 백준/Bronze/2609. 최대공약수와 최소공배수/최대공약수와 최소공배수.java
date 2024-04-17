@@ -1,45 +1,28 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
-    /**
-     * 상수를 제외하고 전역변수 최소화
-     * 하나의 기능을 가진 메서드
-     */
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int x = sc.nextInt();
-        int y = sc.nextInt();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer stk = new StringTokenizer(br.readLine());
+        int a = Integer.parseInt(stk.nextToken());
+        int b = Integer.parseInt(stk.nextToken());
 
-        System.out.println(getGCD(x,y));
-        System.out.println(getLCM(x,y));
+        int gdc = getGCD(a, b);
+        System.out.println(gdc);
+        System.out.println(a * b / gdc);
     }
 
-    /**
-     * 유클리드 호제법 알고리즘을 참고하여 구현하였다.
-     * 최대공약수 알고리즘
-     *
-     * @param x
-     * @param y
-     * @return
-     */
-    public static int getGCD(int x, int y) {
-        if(y == 0) return x;
-        return getGCD(y, x%y);
-    }
+    private static int getGCD(int a, int b) {
 
-//    public static int getGCD(int x, int y) {
-//        int r;
-//        while(y != 0){
-//            r = x % y;
-//            x = y;
-//            y = r;
-//        }
-//        return x;
-//    }
+        while (b != 0) {
+            int r = a % b;
 
-    private static int getLCM(int x, int y) {
-        return x * y / getGCD(x,y);
+            a = b;
+            b = r;
+        }
+        return a;
     }
 }
