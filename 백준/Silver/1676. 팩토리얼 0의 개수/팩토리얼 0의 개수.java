@@ -2,25 +2,37 @@ import java.math.BigInteger;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int n = sc.nextInt();
-        BigInteger factorial = new BigInteger("1");
-        int answer = 0;
+        int num = sc.nextInt();
+        BigInteger factorial = getFactorial(num);
+        int zeroCount = getZeroCount(factorial);
 
-        for (int i = 1; i <= n; i++) {
-            factorial = factorial.multiply(BigInteger.valueOf(i));
-        }
+        System.out.println(zeroCount);
+    }
 
-        for (int i = String.valueOf(factorial).length() - 1; i >= 0; i--) {
-            char a = String.valueOf(factorial).charAt(i);
-            if (a == '0') {
-                answer++;
-            } else {
+    private static int getZeroCount(BigInteger factorial) {
+        int zeroCount = 0;
+        String fatorialString = String.valueOf(factorial);
+        for (int i = fatorialString.length() - 1; i >= 0; i--) {
+            char temp = fatorialString.charAt(i);
+            if (temp == '0') {
+                zeroCount++;
+            }else{
                 break;
             }
         }
-        System.out.println(answer);
+        return zeroCount;
+    }
+
+    private static BigInteger getFactorial(int num) {
+        BigInteger factorial = new BigInteger("1");
+        for (int i = 1; i <= num; i++) {
+            factorial = factorial.multiply(BigInteger.valueOf(i));
+        }
+
+        return factorial;
     }
 }
