@@ -1,38 +1,53 @@
-
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
-    static int[][] network;
-    static boolean[] visited;
-    static int count = 0;
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
 
-        int computerCount = sc.nextInt();
-        int connection = sc.nextInt();
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer stk;
 
-        network = new int[computerCount + 1][computerCount + 1];
-        for (int i = 0; i < connection; i++) {
-            int startNode = sc.nextInt();
-            int endNode = sc.nextInt();
-            network[startNode][endNode] = 1;
-            network[endNode][startNode] = 1;
-        }
+        int numRange = Integer.parseInt(br.readLine());
+        boolean[] visit = new boolean[numRange + 1];
+        int[][] node = new int[numRange + 1][numRange + 1]; // 1~ numRange
+        int answer = 0;
+        int count = 1;
+        int graph = Integer.parseInt(br.readLine());
 
-        visited = new boolean[computerCount + 1];
+        for (int i = 0; i < graph; i++) {
+            stk = new StringTokenizer(br.readLine());
+            int startNode = Integer.parseInt(stk.nextToken());
+            int endNode = Integer.parseInt(stk.nextToken());
 
-        dfs(1);
-        System.out.println(count);
-    }
-
-    private static void dfs(int startNode) {
-        visited[startNode] = true;
-        for (int i = 0; i < network.length; i++) {
-            if (network[startNode][i] ==1 && !visited[i]) {
-                count++;
-                dfs(i);
+            node[startNode][endNode] = 1;
+            node[endNode][startNode] = 1;
+            if (startNode == 1 || endNode == 1) {
+                visit[endNode] = true;
+                visit[startNode] = true;
             }
         }
+
+        while (count != numRange) {
+            for (int i = 0; i < visit.length; i++) {
+                if (visit[i] == true) {
+                    for (int j = 0; j < node[i].length; j++) {
+                        if (node[i][j] == 1) {
+                            visit[j] = true;
+                        }
+                    }
+                }
+            }
+            count++;
+        }
+        
+        visit[1] = false;
+        for (boolean b : visit) {
+            if(b == true) answer++;
+        }
+
+        System.out.println(answer);
     }
 }
