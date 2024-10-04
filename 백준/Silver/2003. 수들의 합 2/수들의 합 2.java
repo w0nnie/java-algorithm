@@ -4,59 +4,34 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class Main {
-    /**
-     * 슈도코드
-     * 10 5
-     * 1 2 3 4 2 5 3 1 1 2
-     *
-     * 3
-     *sum = arr[start] + arr[end]
-     * sum == 5
-     * count ++;
-     *
-     * sum > 5
-     * sum -= arr[i]
-     * start++
-     *
-     * sum < 5
-     * end ++
-     *
-     * 4 2
-     * 1 1 1 1
-     *
-     * 3
-     */
 
 
     public static void main(String[] args) throws IOException {
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        int N = Integer.parseInt(st.nextToken());
-        int M = Integer.parseInt(st.nextToken());
-        int arr[] = new int[N];
-        int startIndex = 0;
-        int endIndex = 0;
-        int sum = 0;
-        int ans = 0;
-        st = new StringTokenizer(br.readLine());
-        for (int i = 0; i < N; i++) {
-            arr[i] = Integer.parseInt(st.nextToken());
+        StringTokenizer stk = new StringTokenizer(br.readLine());
+        int N = Integer.parseInt(stk.nextToken());
+        int M = Integer.parseInt(stk.nextToken());
+        int[] hap = new int[N + 1];
+        stk = new StringTokenizer(br.readLine());
+        for (int i = 1; i <= N; i++) {
+            hap[i] += hap[i - 1] + Integer.parseInt(stk.nextToken());
         }
-        
-        while (true) {
-            if (sum >= M) {
-                sum -= arr[startIndex++];
+        int start = 1;
+        int end = 1;
+        int count = 0;
+        while (start <= N) {
+            int rangeHap = hap[end] - hap[start - 1];
 
-            } else if (endIndex >= N) {
-                break;
-            } else { 
-                sum += arr[endIndex++];
+            if (rangeHap == M) {
+                count++;
             }
-
-            if (sum == M) {
-                ans++;
+            if (rangeHap <= M && end < N) {
+                end++;
+            } else {
+                start++;
             }
         }
-        System.out.println(ans);
+        System.out.println(count);
     }
 }
