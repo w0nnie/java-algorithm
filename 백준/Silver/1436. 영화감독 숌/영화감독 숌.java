@@ -1,29 +1,30 @@
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
 
-        int num = sc.nextInt();
+        int n = sc.nextInt();
 
-        get666(num);
-    }
+        int max = Integer.MAX_VALUE;
 
-    private static void get666(int num) {
         int count = 0;
-        int startNum = 666;
-        while (count != num) {
-            if (String.valueOf(startNum).contains("666")) {
+        int result = 0;
+        for (int i = 666; i < max; i++) {
+
+            if (String.valueOf(i).contains("666")) {
                 count++;
-                if (count != num) {
-                    startNum++;
+
+                if (count == n) {
+                    result = i;
+                    break;
                 }
-            } else {
-                startNum++;
             }
         }
 
-        System.out.println(startNum);
+        System.out.println(result);
     }
 }
