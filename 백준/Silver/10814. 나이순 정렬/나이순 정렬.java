@@ -1,39 +1,30 @@
+import java.io.*;
 import java.util.*;
 
 public class Main {
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int member = sc.nextInt();
-        /**
-         * 2차원 ArrayList 사용해봄
-         */
-        List<String>[] arr = new ArrayList[member];
-        for (int i = 0; i < member; i++) {
-            arr[i] = new ArrayList<>();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer stk;
+
+        int n = Integer.parseInt(br.readLine());
+
+        String[][] name = new String[n][];
+
+        for (int i = 0; i < n; i++) {
+            stk = new StringTokenizer(br.readLine());
+            String[] arr = new String[2];
+            arr[0] = stk.nextToken();
+            arr[1] = stk.nextToken();
+            name[i] = arr;
         }
 
-        for (int i = 0; i < member; i++) {
-            String age = sc.next();
-            String name = sc.next();
-            arr[i].add(age);
-            arr[i].add(name);
-        }
+        Arrays.sort(name, (a,b) -> Integer.compare(Integer.parseInt(a[0]), Integer.parseInt(b[0])));
 
-        /**
-         * 2차원배열 sort
-         */
-        Arrays.sort(arr, new Comparator<List<String>>() {
-            @Override
-            public int compare(List<String> o1, List<String> o2) {
 
-                return  Integer.parseInt(o1.get(0))-Integer.parseInt(o2.get(0));
-            }
-        });
-        
-        for (int i = 0; i < member; i++) {
-            for (int j = 0; j < arr[i].size(); j++) {
-                System.out.print(arr[i].get(j) + " ");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < name[i].length; j++) {
+                System.out.print(name[i][j] + " ");
             }
             System.out.println();
         }
