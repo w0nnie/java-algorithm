@@ -1,38 +1,49 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Stack;
+import java.io.*;
+import java.util.*;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
-        int howManyTime = Integer.parseInt(br.readLine());
-
-        for (int i = 0; i < howManyTime; i++) {
-            Stack stack = new Stack();
+        int n = Integer.parseInt(br.readLine());
+        for (int i = 0; i < n; i++) {
+            Stack<String> stack = new Stack<>();
             String line = br.readLine();
-
+            boolean flag = true;
             for (int j = 0; j < line.length(); j++) {
-                char brackets = line.charAt(j);
+                String a = String.valueOf(line.charAt(j));
 
-                if (brackets == '(') {
-                    stack.push(brackets);
-                } else if (brackets == ')') {
-                    if (stack.isEmpty()) {
-                        stack.push(brackets);
+                //얼리아웃
+                if (j == 0 && a.equals(")")) {
+                    System.out.println("NO");
+                    flag = false;
+                    break;
+                }
+
+                if (a.equals("(")) {
+                    stack.add(a);
+                } else{
+                    if (stack.empty()) {
+                        System.out.println("NO");
+                        flag = false;
                         break;
-                    } else {
+                    }
+                    String before = stack.peek();
+                    if (before.equals("(")) {
                         stack.pop();
+                    } else{
+                        stack.add(a);
                     }
                 }
             }
 
-            if (stack.isEmpty()) {
-                System.out.println("YES");
-            }else{
-                System.out.println("NO");
+            //종료
+            if (flag == true) {
+                if (stack.empty()) {
+                    System.out.println("YES");
+                } else {
+                    System.out.println("NO");
+                }
             }
         }
     }
