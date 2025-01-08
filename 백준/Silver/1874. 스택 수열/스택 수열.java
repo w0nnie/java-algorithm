@@ -1,49 +1,40 @@
 import java.io.*;
-import java.nio.Buffer;
-import java.util.Stack;
+import java.util.*;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
+
+    public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
+        int n = Integer.parseInt(br.readLine());
+        Stack<Integer> stack = new Stack<>();
+        int index = 1;
+        boolean flag = true;
+        for (int i = 0; i < n; i++) {
 
-        Stack<Integer> stack = new Stack();
-        int howManyTime = Integer.parseInt(br.readLine());
-        int currentlyPushNum = 0;
-        for (int i = 0; i < howManyTime; i++) {
             int num = Integer.parseInt(br.readLine());
 
-            if (currentlyPushNum == 0) {
-                currentlyPushNum = num;
-                for (int j = 1; j <= num; j++) {
+            if (num >= index) {
+                for (int j = index; j <= num; j++) {
                     stack.push(j);
                     sb.append("+\n");
+                    index = j + 1;
                 }
+
                 stack.pop();
-                sb.append("-");
-            } else {
-                if (currentlyPushNum < num) {
-                    for (int j = currentlyPushNum + 1; j <= num; j++) {
-                        stack.push(j);
-                        sb.append("\n+");
-                    }
+                sb.append("-\n");
+            } else{
+                Integer peek = stack.peek();
+                if (peek == num) {
                     stack.pop();
-                    sb.append("\n-");
-                    currentlyPushNum = num;
-                }else{
-                    if (stack.peek().equals(num)) {
-                        stack.pop();
-                        sb.append("\n-");
-                    }
+                    sb.append("-\n");
+                } else{
+                    System.out.println("NO");
+                    flag = false;
+                    break;
                 }
             }
         }
-        if (stack.isEmpty()) {
-            System.out.println(sb);
-        }else{
-            System.out.print("NO");
-        }
-        br.close();
+        if(flag) System.out.println(sb);
     }
 }
-
