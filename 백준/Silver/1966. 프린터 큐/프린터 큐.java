@@ -1,52 +1,63 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.*;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException{
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer stk;
 
-        int testCase = Integer.parseInt(br.readLine());
+        int n = Integer.parseInt(br.readLine());
 
-        for (int i = 0; i < testCase; i++) {
+        for (int i = 0; i < n; i++) {
+            StringTokenizer stk = new StringTokenizer(br.readLine());
+
+            int numCount = Integer.parseInt(stk.nextToken());
+            int findNumIndex = Integer.parseInt(stk.nextToken());
+
+            Queue<int[]> q = new LinkedList<>();;
+
             stk = new StringTokenizer(br.readLine());
-            int documents = Integer.parseInt(stk.nextToken()); //문서 수
-            int location = Integer.parseInt(stk.nextToken());  // 찾고자 하는 문서의 위치
 
-            stk = new StringTokenizer(br.readLine());
-            Queue<int[]> queue = new LinkedList<>(); // 중요도 배열
-            int index = 0;
-            while (stk.hasMoreTokens()) {
-                queue.add(new int[]{index, Integer.parseInt(stk.nextToken())});
-                index++;
+            int[] arr = new int[numCount];
+            for (int j = 0; j < numCount; j++) {
+
+                int[] a = new int[2];
+                int num = Integer.parseInt(stk.nextToken());
+                a[0] = num;
+                arr[j] = num;
+                if (j == findNumIndex) {
+                    a[1] = 1;
+                }
+                q.add(a);
             }
 
-            int printCount = 1;
-
+            int count = 0;
             while (true) {
-                int max = Integer.MIN_VALUE;
-                for (int[] ints : queue) { // queue의 원소중 max값을 찾는 로직
-                    int important = ints[1];
-                    if (important > max) {
-                        max = important;
-                    }
-                }
 
-                if (queue.peek()[1] == max) {
-                    int[] a = queue.poll();
-
-                    if (a[0] == location) { 
+                // 종료조건
+                int[] poll = q.poll();
+                int num = poll[1];
+                boolean max = true;
+                
+                //가장 큰 값인지
+                for (int[] curQ : q) {
+                    if (curQ[0] > poll[0]) {
+                        max = false;
                         break;
                     }
-                    printCount++;
+                }
+
+                if (max) {
+                    count++;
+                    if (num == 1) {
+                        System.out.println(count);
+                        break;
+                    }
                 } else {
-                    queue.add(queue.poll());
+                    q.add(poll);
                 }
             }
-            System.out.println(printCount);
         }
     }
 }
