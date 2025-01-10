@@ -1,45 +1,63 @@
 import java.io.*;
 import java.util.*;
+
 public class Main {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException{
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
         int N = Integer.parseInt(br.readLine());
-
-        List<Double> list = new ArrayList<>();
+        int[] arr = new int[N];
 
         for (int i = 0; i < N; i++) {
-            list.add(Double.parseDouble(br.readLine()));
+            int num = Integer.parseInt(br.readLine());
+            arr[i] = num;
         }
 
-        list.sort(Comparator.naturalOrder());
-
-        double middle = list.get(Math.round(N / 2));
-        System.out.println(Math.round(list.stream().reduce(0.0D, Double::sum) / N));
-        System.out.println((int) middle);
-        float max = (float) list.stream().mapToDouble(x -> x).max().orElseThrow(NoSuchElementException::new);
-        float min = (float) list.stream().mapToDouble(x -> x).min().orElseThrow(NoSuchElementException::new);
-        System.out.println((int) findMode(list));
-        System.out.println((int) (max - min));
-
+        Arrays.sort(arr);
+        System.out.println(getAverage(arr));
+        System.out.println(getMiddle(arr));
+        System.out.println(getMode(arr));
+        System.out.println(getRange(arr));
     }
 
-    private static double findMode(List<Double> list) {
-        Map<Double, Integer> frequencyMap = new HashMap<>();
-
-        for (Double num : list) {
-            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);
+    private static int getAverage(int[] arr) {
+        int hap = 0;
+        for (int i = 0; i < arr.length; i++) {
+            hap += arr[i];
         }
-        int maxFrequency = Collections.max(frequencyMap.values());
+        return Math.round(hap / (float) arr.length);
+    }
 
-        TreeSet<Double> modes = new TreeSet<>();
-        for (Map.Entry<Double, Integer> entry : frequencyMap.entrySet()) {
-            if (entry.getValue() == maxFrequency) {
-                modes.add(entry.getKey());
+    private static int getMiddle(int[] arr) {
+        return arr[arr.length/2];
+    }
+
+    private static int getMode(int[] arr) {
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < arr.length; i++) {
+            map.put(arr[i], map.getOrDefault(arr[i], 0) + 1);
+        }
+
+        int max = Collections.max(map.values());
+
+        List<Integer> list = new ArrayList<>();
+
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            if (entry.getValue() == max) {
+                list.add(entry.getKey());
             }
         }
 
-        return modes.stream().skip(1).findFirst().orElse(modes.first());
+        Collections.sort(list);
+
+        return list.size() > 1 ? list.get(1) : list.get(0);
+    }
+
+    private static int getRange(int[] arr) {
+        int max = arr[arr.length-1];
+        int min = arr[0];
+        return max - min;
     }
 }
