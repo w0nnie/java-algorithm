@@ -1,51 +1,63 @@
-
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
 public class Main {
-    static int[][] arr;
-    static boolean[][] visited;
-    static int[] dx = {-1, 1, 0, 0}; //상하좌우
-    static int[] dy = {0, 0, -1, 1}; // 상하좌우
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
-        int testCase = sc.nextInt();
+    static int m;
+    static int n;
+    static int[][] field;
+    static boolean[][] visit;
+                    //상, 하, 좌, 우
+    static int[] dx = {0, 0, -1, 1};
+    static int[] dy = {-1, 1, 0, 0};
+
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int testCase = Integer.parseInt(br.readLine());
+
 
         for (int i = 0; i < testCase; i++) {
-            int m = sc.nextInt(); //가로
-            int n = sc.nextInt(); //세로
-            int cabbageCount = sc.nextInt(); //배추 개수
-            arr = new int[m][n];
-            visited = new boolean[m][n];
-            for (int j = 0; j < cabbageCount; j++) {
-                int x = sc.nextInt();
-                int y = sc.nextInt();
-                arr[x][y] =1;
+
+
+            StringTokenizer stk = new StringTokenizer(br.readLine());
+            m = Integer.parseInt(stk.nextToken());
+            n = Integer.parseInt(stk.nextToken());
+            field = new int[n][m];
+            visit = new boolean[n][m];
+            int k = Integer.parseInt(stk.nextToken());
+
+            for (int j = 0; j < k; j++) {
+                stk = new StringTokenizer(br.readLine());
+                int col = Integer.parseInt(stk.nextToken());
+                int row = Integer.parseInt(stk.nextToken());
+                field[row][col] = 1;
             }
-            int count = 0; //구역수
-            for (int j = 0; j < m; j++) {
-                for (int k = 0; k < n; k++) {
-                    if (arr[j][k] == 1 && !visited[j][k]) {
-                        dfs(j, k, m, n);
-                        count++;
+
+            int answer = 0;
+
+            for (int row = 0; row < n; row++) {
+                for (int col = 0; col < m; col++) {
+                    if (field[row][col] == 1 && !visit[row][col]) {
+                        getDfs(row, col);
+                        answer++;
                     }
                 }
             }
-            System.out.println(count);
+            System.out.println(answer);
         }
     }
 
-    private static void dfs(int x, int y, int m, int n) {
-        visited[x][y] = true;
-
+    public static void getDfs(int row, int col) {
+        visit[row][col] =true;
 
         for (int i = 0; i < 4; i++) {
-            int cx = x + dx[i];
-            int cy = y + dy[i];
+            int nrow = row + dy[i];
+            int ncol = col + dx[i];
 
-            if (cx >= 0 && cy >= 0 && cx < m && cy < n) {
-                if (!visited[cx][cy] && arr[cx][cy] == 1) {
-                    dfs(cx, cy, m, n);
+            if (nrow >= 0 && nrow < n && ncol >= 0 && ncol < m) {
+                if (field[nrow][ncol] == 1 && !visit[nrow][ncol]) {
+                    getDfs(nrow, ncol);
                 }
             }
         }
