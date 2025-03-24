@@ -1,35 +1,30 @@
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main {
-    static int[] dp;
-    public static void main(String[] args) throws IOException{
+
+    public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int n = Integer.parseInt(br.readLine());
 
-        dp = new int[1001];
+        int[] arr = new int[n + 1];
+        if(n == 1) System.out.println(1);
+        if(n == 2) System.out.println(3);
+        if(n == 3) System.out.println(5);
 
-        for (int i = 1; i <= 1000; i++) {
-            dp[i] = -1;
+        if (n >= 4) {
+            arr[1] = 1;
+            arr[2] = 3;
+            arr[3] = 5;
+
+            for (int i = 4; i <= n; i++) {
+                arr[i] = (arr[i - 1] + arr[i - 2] + arr[i - 2]) % 10007;
+            }
+
+            System.out.println(arr[n]);
         }
-
-        dp[1] = 1;
-        dp[2] = 3;
-        dp[3] = 5;
-
-        int answer = getDp(n);
-
-        System.out.println(answer);
-    }
-
-    public static int getDp(int n) {
-
-        if (dp[n] == -1) {
-            dp[n] = (getDp(n - 1) + getDp(n - 2) + getDp(n - 2)) % 10007;
-        }
-
-        return dp[n];
     }
 }
