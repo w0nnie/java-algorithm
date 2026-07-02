@@ -1,62 +1,89 @@
+import java.io.*;
+import java.util.*;
+
 class Solution {
     public int[] solution(int n) {
-        int[][] arr = new int[n][n];
-        int num = 1;
-        int row = 0;
-        int col = 0;
-        arr[row][col] =num;
-        while (true) {
-            //아랫쪽으로
-            if(n == 1) break;
-
-            for (int i = row+1; i < n; i++) {
-                if(arr[i][col] != 0) break;
-                arr[i][col] = ++num;
-                if(row < n-1) row++;
-            }
-            if(arr[row][col+1] != 0 ) break;
-
-            //오른쪽으로
-            for (int i = col+1; i < n; i++) {
-                if(arr[row][i] != 0) break;
-                arr[row][i] = ++num;
-                if(col < n-1) col++;
-            }
-            if(arr[row-1][col-1] !=0) break;
-            
-            //왼쪽 위로
-            for (int i = row-1, j = col-1; i >= 0 && j >= 0; i--, j--) {
-                if(arr[i][j] != 0) break;
-                arr[i][j] = ++num;
-                if(row > 0) row--;
-                if(col > 0) col--;
-            }
-
-            if(arr[row+1][col] != 0) break;
-
-        }
-        //배열 사이즈용 변수
-        int count = 0;
-
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
-                if (arr[i][j] != 0) {
-                    count++;
-                }
-            }
-        }
-        int[] answer = new int[count];
-
+        
+        //종료지점 만드는 메서드
+        int[] endpointArray = new int[n+1];
+        int endPoint = getEndPoint(endpointArray, n);
+        
+        int[][] board = new int[n][n];
+        
+        // 배열 채우는 메서드
+        fillArray(board, endPoint, n);
+        
+        int[] answer = new int[endPoint];
         int index = 0;
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
-                if (arr[i][j] != 0) {
-                    answer[index++] = arr[i][j];
+        
+        for(int i = 0; i< board.length; i++){
+            for(int j = 0; j <board[i].length; j++){
+                if(board[i][j] !=0){
+                    answer[index++] = board[i][j];
                 }
             }
-
         }
-
+        
         return answer;
+    }
+    
+    public static void fillArray(int[][] board, int endPoint, int n) {
+        
+        int num = 2;
+        int col = 0;
+        int row = 0;
+        board[row][col] = 1;
+        int dir = 0;
+        while(num <= endPoint){
+            
+            switch(dir){
+                case 0: // 아래
+                    while(row+1 < n && board[row+1][col] == 0){
+                        board[row+1][col] = num;
+                        row+=1;
+                        num+=1;
+                    }
+                    dir = 1;
+                    break;
+                case 1: // 오른쪽
+                    while(col+1 < n && board[row][col+1] == 0){
+                        board[row][col+1] = num;
+                        col+=1;
+                        num+=1;
+                    }
+                    dir = 2;
+                    break;
+                case 2: // 대각선    
+                    while(row-1 < n && 
+                          col-1 < n && 
+                          row-1 > 0 && 
+                          col-1 >0 && 
+                          board[row-1][col-1] == 0){
+                        board[row-1][col-1] = num;
+                        row-=1;
+                        col-=1;
+                        num+=1;
+                    }
+                    dir = 0;
+                    break;
+            }
+        }
+    }
+    
+    public static int getEndPoint(int[] endpointArray, int n){
+        
+        if(n == 1) return 1;
+        
+        endpointArray[1] = 1;
+        endpointArray[2] = 3;
+        
+        int point = 3;
+        while(point <= n){
+            
+            endpointArray[point] = endpointArray[point-1] + point;
+            point++;
+        }
+        
+        return endpointArray[n];
     }
 }
